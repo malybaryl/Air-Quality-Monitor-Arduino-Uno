@@ -39,7 +39,7 @@ A real-time air quality monitoring system using Arduino Uno Rev3. This project m
 |-------------------|-----------------|------------------------------------|
 | PMS5003 TX        | D3              | Particulate matter sensor TX line |
 | PMS5003 RX        | D4              | Particulate matter sensor RX line |
-| DHT11 Data        | D2              | Data line for temperature & humidity |
+| DHT11 Data        | D9              | Data line for temperature & humidity |
 | LCD RS            | D12             | LCD control pin                   |
 | LCD E             | D11             | LCD enable pin                    |
 | LCD D4-D7         | D5-D2           | LCD data pins                     |
