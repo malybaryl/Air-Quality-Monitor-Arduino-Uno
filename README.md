@@ -45,7 +45,7 @@ A real-time air quality monitoring system using Arduino Uno Rev3. This project m
 | LCD D4-D7         | D5-D2           | LCD data pins                     |
 | Buzzer            | D8              | + connected to D8, - to GND       |
 | Button            | D7              | Connected with 10kΩ pull-up       |
-| LCD Backlight A   | 5V (via 220Ω)   | Anode                             |
+| LCD Backlight A   | D6              | Anode                             |
 | LCD Backlight K   | GND             | Cathode                           |
 
 ---
