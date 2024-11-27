@@ -37,15 +37,15 @@ A real-time air quality monitoring system using Arduino Uno Rev3. This project m
 ### Wiring Diagram
 | Component         | Arduino Pin     | Notes                              |
 |-------------------|-----------------|------------------------------------|
-| PMS5003 TX        | D3              | Particulate matter sensor TX line |
-| PMS5003 RX        | D4              | Particulate matter sensor RX line |
-| DHT11 Data        | D2              | Data line for temperature & humidity |
+| PMS5003 TX        | D10             | Particulate matter sensor TX line |
+| PMS5003 RX        | D13             | Particulate matter sensor RX line |
+| DHT11 Data        | D9              | Data line for temperature & humidity |
 | LCD RS            | D12             | LCD control pin                   |
 | LCD E             | D11             | LCD enable pin                    |
 | LCD D4-D7         | D5-D2           | LCD data pins                     |
 | Buzzer            | D8              | + connected to D8, - to GND       |
 | Button            | D7              | Connected with 10kΩ pull-up       |
-| LCD Backlight A   | 5V (via 220Ω)   | Anode                              |
+| LCD Backlight A   | D6              | Anode                             |
 | LCD Backlight K   | GND             | Cathode                           |
 
 ---
