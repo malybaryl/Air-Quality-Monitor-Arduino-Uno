@@ -50,12 +50,12 @@ void LcdController::show_actual_pm(String pm1, String pm2, String pm10, bool dat
     if (dataRead) {
         lcd.clear();
         lcd.setCursor(0, 0);
-        lcd.print("[A]      PM1:");
+        lcd.print("[A]ug/m3 PM1:");
         lcd.print(pm1);
         lcd.setCursor(0, 1);
         lcd.print("PM2:");
         lcd.print(pm2);
-        lcd.print(" PM10:");
+        lcd.print("  PM10:");
         lcd.print(pm10);   
     } else {
         lcd.clear();
@@ -80,12 +80,24 @@ void LcdController::show_long_term_temperature_and_humidity(float temp, float hu
     lcd.print(" %");
 }
 
-void LcdController::show_long_term_pm() {
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("[L]     PM1: 22");
-    lcd.setCursor(0, 1);
-    lcd.print("PM2: 22 PM10: 22");
+void LcdController::show_long_term_pm(String pm1, String pm2, String pm10, bool dataRead) {
+    if (dataRead) {
+        lcd.clear();
+        lcd.setCursor(0, 0);
+        lcd.print("[L]ug/m3 PM1:");
+        lcd.print(pm1);
+        lcd.setCursor(0, 1);
+        lcd.print("PM2:");
+        lcd.print(pm2);
+        lcd.print("  PM10:");
+        lcd.print(pm10);   
+    } else {
+        lcd.clear();
+        lcd.setCursor(0, 0);
+        lcd.print("[A] PM: WAITING");
+        lcd.setCursor(0, 1);
+        lcd.print("FOR DATA...");
+    }
 }
 
 void LcdController::show_warning() {

@@ -20,7 +20,7 @@ public:
     void show_actual_temperature_and_humidity(float temp, float humidity);
     void show_actual_pm(String pm1, String pm2, String pm10, bool dataRead);
     void show_long_term_temperature_and_humidity(float temp, float humidity);
-    void show_long_term_pm();
+    void show_long_term_pm(String pm1, String pm2, String pm10, bool dataRead);
     void show_warning();
 };
 
