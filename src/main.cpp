@@ -15,7 +15,7 @@ BuzzerController buzzer;             // Controls buzzer for alerts
 // Timing and state management
 unsigned long lastUpdate = 0;        // Tracks the last time sensors were updated
 unsigned long lastAlert = 0;         // Tracks the last alert timestamp
-const unsigned long updateInterval = 1000;           // 1-second update interval for sensors
+const unsigned long updateInterval = 5000;           // 1-second update interval for sensors
 const unsigned long alertCooldownInterval = 60000;   // 1-minute cooldown for alerts
 bool warning = false;                // Indicates if a warning is active
 bool alertCooldown = false;          // Tracks if the system is in cooldown mode

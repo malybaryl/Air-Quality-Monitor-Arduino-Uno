@@ -94,7 +94,7 @@ void LcdController::show_long_term_pm(String pm1, String pm2, String pm10, bool 
     } else {
         lcd.clear();
         lcd.setCursor(0, 0);
-        lcd.print("[A] PM: WAITING");
+        lcd.print("[L] PM: WAITING");
         lcd.setCursor(0, 1);
         lcd.print("FOR DATA...");
     }
