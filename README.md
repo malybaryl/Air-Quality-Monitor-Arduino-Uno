@@ -1,4 +1,4 @@
-# Air-Quality-Monitor-Arduino-Uno
+# Air Quality Monitor Arduino Uno
 
 A real-time air quality monitoring system using Arduino Uno Rev3. This project measures particulate matter (PM1.0, PM2.5, PM10), temperature, and humidity. The data is displayed on a 16x2 LCD screen and analyzed to provide long-term insights. Alerts are triggered via a buzzer when air quality exceeds safe thresholds.
 
