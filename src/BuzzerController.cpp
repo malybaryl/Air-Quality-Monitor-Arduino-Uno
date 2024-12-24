@@ -1,23 +1,41 @@
 #include "BuzzerController.h"
 
-// Konstruktor bezargumentowy
-BuzzerController::BuzzerController() : buzzerPin(8) { // Domyślny pin 8
+
+
+/**
+ * Default constructor: uses predefined buzzer pin (8).
+ * Initializes the pin as output and sets it to LOW state.
+ */
+BuzzerController::BuzzerController() : buzzerPin(8) 
+{ 
     pinMode(buzzerPin, OUTPUT);
-    digitalWrite(buzzerPin, LOW); // Ustaw buzzer jako wyłączony
+    digitalWrite(buzzerPin, LOW); 
 }
 
-// Konstruktor argumentowy
-BuzzerController::BuzzerController(int pin) : buzzerPin(pin) {
+/**
+ * Constructor with pin assignment.
+ * Initializes the specified pin as output and sets it to LOW state.
+ * @param pin Pin number connected to the buzzer.
+ */
+BuzzerController::BuzzerController(int pin) : buzzerPin(pin) 
+{
     pinMode(buzzerPin, OUTPUT);
-    digitalWrite(buzzerPin, LOW); // Ustaw buzzer jako wyłączony
+    digitalWrite(buzzerPin, LOW);
 }
 
-// Metoda włączająca buzzer
-void BuzzerController::turnOn() {
+/**
+ * Turns the buzzer on (HIGH state).
+ */
+void BuzzerController::turnOn()
+{
     digitalWrite(buzzerPin, HIGH);
 }
 
-// Metoda wyłączająca buzzer
-void BuzzerController::turnOff() {
+
+/**
+ * Turns the buzzer off (LOW state).
+ */
+void BuzzerController::turnOff() 
+{
     digitalWrite(buzzerPin, LOW);
 }

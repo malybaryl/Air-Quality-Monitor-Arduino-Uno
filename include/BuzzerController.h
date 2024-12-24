@@ -8,17 +8,16 @@ private:
     int buzzerPin;
 
 public:
-    // Konstruktor bezargumentowy
+
     BuzzerController();
 
-    // Konstruktor argumentowy
     BuzzerController(int pin);
 
-    // Metoda włączająca buzzer
+
     void turnOn();
 
-    // Metoda wyłączająca buzzer
+
     void turnOff();
 };
 
-#endif // BUZZERCONTROLLER_H
+#endif 

@@ -23,9 +23,11 @@ class PMS5003Controller {
     uint16_t unused;
     uint16_t checksum;
     };
+
     struct pms5003data data;
 
 public:
+
     PMS5003Controller();
     PMS5003Controller(int PMS5003_RX_Pin, int PMS5003_TX_Pin);
     float getPM1_0() { return _PM1_0; };
@@ -34,7 +36,7 @@ public:
     void wakeUp() { pms.wakeUp(); };
     void setPassiveMode() { pms.passiveMode(); };
     void requestRead() { pms.requestRead(); };
-    bool hasValidData() { return _PM1_0 > 0 || _PM2_5 > 0 || _PM10 > 0; };
+    bool hasValidData() { return (_PM1_0 >= 0 && _PM1_0 <= 1000) && (_PM2_5 >= 0 && _PM2_5 <= 1000) && (_PM10 >= 0 && _PM10 <= 1000);};
     String getPM1_0String() { return String((int)_PM1_0); }
     String getPM2_5String() { return String((int)_PM2_5); }
     String getPM10String() { return String((int)_PM10); }

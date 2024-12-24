@@ -1,13 +1,13 @@
 #ifndef DHT11CONTROLLER_H
 #define DHT11CONTROLLER_H
 
-#include <DHT.h>  // Biblioteka obsługująca DHT
+#include <DHT.h> 
 
-#define DHTPIN 9      // Domyślny pin dla DHT11
-#define DHTTYPE DHT11 // Typ czujnika
+#define DHTPIN 9      
+#define DHTTYPE DHT11 
 
 class DHT11Controller {
-    DHT dht; // Obiekt DHT (z biblioteki)
+    DHT dht; 
     float _temperature;
     float _humidity;
     float _temperatureAverage;
@@ -15,12 +15,12 @@ class DHT11Controller {
     float data[2][25] = {0};
     int dataIndex = 0;
 public:
-    DHT11Controller();                // Konstruktor domyślny
-    DHT11Controller(int DHT11_Pin);   // Konstruktor z wyborem pinu
-    float getTemperature();          // Metoda do odczytu temperatury
-    float getHumidity();             // Metoda do odczytu wilgotności
-    float getTemperatureAverage();          // Metoda do odczytu temperatury
-    float getHumidityAverage();             // Metoda do odczytu wilgotności
+    DHT11Controller();              
+    DHT11Controller(int DHT11_Pin);
+    float getTemperature();         
+    float getHumidity();           
+    float getTemperatureAverage();          
+    float getHumidityAverage();            
     void readTemperatureAndHumidity();
     void averageTemperatureAndHumidityHandler();
 };
