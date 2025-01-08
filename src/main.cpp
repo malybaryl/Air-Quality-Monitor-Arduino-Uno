@@ -21,6 +21,11 @@ const unsigned long alertCooldownInterval = 60000;   // 1-minute cooldown for al
 bool warning = false;                // Indicates if a warning is active
 bool alertCooldown = false;          // Tracks if the system is in cooldown mode
 
+/**
+ * Initializes the system by displaying an "Initializing..." message,
+ * waiting 3 seconds, and taking initial readings from the DHT11 and
+ * PMS5003 sensors. The button state is also set to its default value.
+ */
 void setup() {
     lcdScreen.print("Initializing...", true);
     Delay::delay_ms(3000);
@@ -31,6 +36,21 @@ void setup() {
     button.setState(1);  // Default button state
 }
 
+/**
+ * Main loop for the system. Checks for button presses, handles cooldowns for alerts,
+ * periodically updates sensors, and triggers warnings if thresholds are exceeded.
+ *
+ * If the button is pressed, it changes the display state and handles the alert cooldown
+ * if the warning is active. If the warning is active, it will stay active until the
+ * button is pressed again.
+ *
+ * Periodically updates the sensors (DHT11 and PMS5003) and checks if the thresholds
+ * are exceeded. If the thresholds are exceeded and the cooldown is not active, it will
+ * trigger the warning and start the cooldown.
+ *
+ * Updates the LCD display based on the current state, which is determined by the
+ * button state.
+ */
 void loop() {
     // Handle button presses
     if (button.buttonPressed()) {
